@@ -1,0 +1,96 @@
+/* 
+    Document   : ns
+    Created on : March 8th 2011, 1:43:07 am
+    Author     : Spiros Kabasakalis
+    Description:css for Nivo Slider Management page
+        
+
+*/
+
+root { 
+    display: block;
+}
+
+.input_div input {
+
+    background-color: #666666;
+       color: #FFFFFF;
+}
+
+.input_div select {
+   background-color: #666666;
+       color: #FFFFFF; 
+    
+}
+
+
+
+.thumb_container{
+     width: 100px ;
+  margin-left: auto ;
+  margin-right: auto ;
+   margin-top: 10px;
+
+}
+
+.thumb_container img{
+
+   border: 2px solid red;
+
+}
+
+.savebutton_div {
+ float: right;
+    
+}
+.image_update{
+
+
+    background-color: #000000;
+          padding: 10px;
+}
+.griditem {
+    height:130px;
+
+}
+
+.img_title {
+ height: 1.3em;
+    overflow: hidden;
+    
+}
+
+.tmb{
+margin-top:  5px;
+ 
+}
+
+#uploaded_images {
+  margin-bottom: 90px;
+    margin-top: 30px;
+}
+
+
+#sub_btn_div {
+    float: right;
+}
+
+.imgupload{
+  height: 220px;
+    margin: 1px;
+    overflow: auto;
+    
+}
+
+.imgupload input{
+  background-color: #666666;
+       color: #FFFFFF; 
+    
+}
+
+.list-view {
+
+    clear: both;
+    margin:10px;
+}
+

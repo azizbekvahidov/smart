@@ -1,0 +1,27 @@
+CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'employeeId' in 'where clause'. The SQL statement executed was: SELECT *
+FROM `operatorBall`
+WHERE rateDate = :date and employeeId = :empId
+CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'employeeId' in 'where clause'. The SQL statement executed was: SELECT *
+FROM `operatorBall`
+WHERE rateDate = :date and employeeId = :empId
+CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'employeeId' in 'where clause'. The SQL statement executed was: SELECT *
+FROM `operatorBall`
+WHERE rateDate = :date and employeeId = :empId
+CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[HY000]: General error: 1364 Field 'archiveOperatoraRateId' doesn't have a default value. The SQL statement executed was: INSERT INTO `archiveoperationrate` (`rateDate`, `rateType`, `employeeId`, `lineRateId`) VALUES (:rateDate, :rateType, :employeeId, :lineRateId)
+empId:41;depId:4;type:error;id:49
+empId:31;depId:4;type:error;id:7
+empId:2;depId:4;type:error;id:25
+empId:36;depId:4;type:error;id:68
+empId:2;depId:4;type:error;id:25
+empId:41;depId:4;type:error;id:49
+empId:31;depId:4;type:error;id:8
+empId:37;depId:4;type:error;id:13
+empId:31;depId:4;type:error;id:8
+empId:2;depId:4;type:error;id:25
+empId:2;depId:4;type:error;id:25
+empId:2;depId:4;type:error;id:25
+empId:2;depId:4;type:error;id:25
+empId:42;depId:4;type:error;id:25
+empId:42;depId:4;type:error;id:25
+empId:31;depId:4;type:error;id:7
+empId:36;depId:4;type:error;id:58

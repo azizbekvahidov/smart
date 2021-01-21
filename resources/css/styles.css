@@ -1,0 +1,373 @@
+
+.grid-view-loading
+{
+	background:url(loading.gif) no-repeat;
+}
+
+.grid-view
+{
+	padding: 15px 0;
+}
+
+.grid-view table.items
+{
+	background: white;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px #D0E3EF solid;
+}
+
+.grid-view table.items th, .grid-view table.items td
+{
+	font-size: 0.9em;
+	border: 1px white solid;
+	padding: 0.3em;
+}
+
+.grid-view table.items th
+{
+	color: white;
+	background: url("bg.gif") repeat-x scroll left top white;
+	text-align: center;
+}
+
+.grid-view table.items th a
+{
+	color: #EEE;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.grid-view table.items th a:hover
+{
+	color: #FFF;
+}
+
+.grid-view table.items th a.asc
+{
+	background:url(up.gif) right center no-repeat;
+	padding-right: 10px;
+}
+
+.grid-view table.items th a.desc
+{
+	background:url(down.gif) right center no-repeat;
+	padding-right: 10px;
+}
+
+.grid-view table.items tr.even
+{
+	background: #F8F8F8;
+}
+
+.grid-view table.items tr.odd
+{
+	background: #E5F1F4;
+}
+
+.grid-view table.items tr.selected
+{
+	background: #BCE774;
+}
+
+.grid-view table.items tr:hover.selected
+{
+	background: #CCFF66;
+}
+
+.grid-view table.items tbody tr:hover
+{
+	background: #ECFBD4;
+}
+
+.grid-view .link-column img
+{
+	border: 0;
+}
+
+.grid-view .button-column
+{
+	text-align: center;
+	width: 60px;
+}
+
+.grid-view .button-column img
+{
+	border: 0;
+}
+
+.grid-view .checkbox-column
+{
+	width: 15px;
+}
+
+.grid-view .summary
+{
+	margin: 0 0 5px 0;
+	text-align: right;
+}
+
+.grid-view .pager
+{
+	margin: 5px 0 0 0;
+	text-align: right;
+}
+
+.grid-view .empty
+{
+	font-style: italic;
+}
+
+.grid-view .filters input,
+.grid-view .filters select
+{
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+.bg{
+	position: relative;
+	width: 100%;
+	background: url("/images/birthday/desk.jpg") no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+	z-index: 0;
+}
+.headTitle{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: url("/images/birthday/headTitle.png") no-repeat;
+	background-size: 62%;
+	background-position: 19% 1%;
+	height:calc(100%/1.93);
+}
+.innerDiv{
+	height: 0;
+	padding-top: calc(100%/1.93);
+
+}
+.some{
+	height: 0;
+	padding-top: 195%;
+
+}
+.ballons{
+	width: 88%;
+	top: 0;
+	right: -1%;
+	position: absolute;
+	background: url("/images/birthday/ballonsGift.png") no-repeat;
+	background-size: 50%;
+	background-position: right;
+	height: 100%;
+}
+.confetti{
+	width: 100%;
+	top: 0;
+	position: absolute;
+	background: url("/images/birthday/Confett.png") no-repeat;
+	background-size: 100%;
+	background-position: center 126%;
+	height: 100%;
+}
+.convert{
+	width: 100%;
+	position: absolute;
+	bottom: -4%;
+	background: url("/images/birthday/convert.png") no-repeat;
+	background-size: 52%;
+	background-position: center bottom;
+	height: 100%;
+}
+.phones{
+	width: 98%;
+	position: absolute;
+	bottom: 4%;
+	left: 3%;
+	z-index: 1;
+}
+.phones img{
+	z-index: 2;
+	width: 26%;
+}
+.phoneDisplay{
+	border-radius: 12px;
+	z-index: 3;
+	width: 14.5%;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	margin-left: 11%;
+	margin-top: 2%;
+}
+.phoneDisplay > div > img{
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	z-index: -1;
+}
+.phoneDisplay2{
+	border-radius: 12px;
+	z-index: 3;
+	background: url("/images/birthday/photo2.png") no-repeat;
+	width: 14.5%;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	margin-left: 11%;
+	margin-top: 2%;
+}
+.circle{
+	position: absolute;
+	bottom: 15%;
+	left: 13%;
+}
+.circle img{
+	width: 21%;
+}
+.statusBar{
+	position: absolute;
+	top: 1%;
+	left: 2.7%;
+}
+.statusBar img{
+	width: 98%;
+}
+.circle div{
+	display: inline;
+	margin-right: 8%;
+}
+.texts{
+	font-family: Arial;
+	font-style: italic;
+	position: absolute;
+	top: 4%;
+	left: 28%;
+	color: white;
+
+}
+
+.photoCont img{
+	width: 50px;
+	height: 100px;
+	border: 1px solid #000;
+	float: left;
+	cursor: pointer;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: #2196F3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: #2196F3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}

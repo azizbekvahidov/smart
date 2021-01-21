@@ -1,0 +1,11 @@
+AddDefaultCharset utf-8
+
+RewriteEngine on
+
+# if a directory or file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#otherwise forward it to sell.php
+RewriteRule . index.php
+php_value date.timezone 'Asia/Tashkent'

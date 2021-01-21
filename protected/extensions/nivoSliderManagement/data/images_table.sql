@@ -1,0 +1,13 @@
+CREATE  TABLE IF NOT EXISTS `images` (
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `file_id` VARCHAR(80) NULL ,
+  `basename` VARCHAR(45) NULL ,
+  `extension` VARCHAR(6) NULL ,
+  `title` VARCHAR(256) NULL ,
+  `size` VARCHAR(20) NULL ,
+  `type` VARCHAR(20) NULL ,
+  `path` VARCHAR(256) NULL ,
+  `url` VARCHAR(256) NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
