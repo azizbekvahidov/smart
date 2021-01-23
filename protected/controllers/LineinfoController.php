@@ -72,6 +72,41 @@ class LineinfoController extends Controller
             ->order("actionId desc")
             ->queryAll();
 
-        echo json_encode($res = array("model"=>$model,"linePos"=>$linePos,"phone"=>$phone));
+        $hum = Yii::app()->db->CreateCommand()
+            ->select("value")
+            ->from('lineinfo')
+            ->where('`type`="hum"')
+            ->order('infoDate desc')
+            ->queryRow();
+        $temp = Yii::app()->db->CreateCommand()
+            ->select("value")
+            ->from('lineinfo')
+            ->where('`type`="temp"')
+            ->order('infoDate desc')
+            ->queryRow();
+
+        $remote = Yii::app()->db->CreateCommand()
+            ->select("value")
+            ->from('lineinfo')
+            ->where('`type`="remote"')
+            ->order('infoDate desc')
+            ->queryRow();
+
+        $count = Yii::app()->db->CreateCommand()
+            ->select("count(*) as cnt")
+            ->from('lineinfo')
+            ->where('`type`="distance" and infoDate >= "'.$produceDep["produceDate"].'"')
+            ->order('infoDate desc')
+            ->queryRow();
+
+        echo json_encode($res = array(
+            "model"=>$model,
+            "linePos"=>$linePos,
+            "phone"=>$phone,
+            "hum"=>$hum["value"],
+            "temp"=>$temp["value"],
+            "remote"=>$remote["value"],
+            "count"=>$count["cnt"]
+        ));
     }
 }
