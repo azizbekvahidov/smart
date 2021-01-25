@@ -1,4 +1,5 @@
 <? $func = new Functions(); $pCnt = 0; $sCnt = 0; $planCnt = 0; $ballCnt = 0; $difference = 0?>
+<div style="background-color: #fff">
 <table>
     <thead>
         <tr>
@@ -39,4 +40,4 @@
             <th style="color:red;"><?=$difference?></th>
         </tr>
     </tfoot>
-</table>
+</table></div>
