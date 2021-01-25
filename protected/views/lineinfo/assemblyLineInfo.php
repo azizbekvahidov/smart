@@ -74,10 +74,23 @@
     .font2{
         font-size: 25vh;
     }
+    .font3{
+        font-size: 8vh;
+    }
     .clock{
         position: absolute;
-        bottom: 1vh;
+        bottom: 6vh;
         right: 1vh;
+    }
+    .assemblyCnt{
+        position: absolute;
+        bottom: 1vh;
+        left: 1vh;
+    }
+    .temperature{
+        position: absolute;
+        top: 1vh;
+        left: 1vh;
     }
 </style>
 <div class="constainer">
@@ -110,7 +123,8 @@
 
     </div>
 </div>
-
+<div class="font2 assemblyCnt">0</div>
+<div class="font3 temperature">Temperature: <span id="temp">-</span> &#186;C &nbsp; Humidity: <span id="hum">-</span>%</div>
 <div class="font2 clock" style="line-height: 100%"><?=date("H:i:s")?> </div>
 <script>
     var curPhone = 0;
@@ -153,6 +167,11 @@
                     $(id).children("div.posEmp").text(i.surname+" "+i.eName);
                 }
                 $("#model").text(data.phone.model);
+                $(".assemblyCnt").text(data.count);
+                $("#temp").text(data.temp);
+                $("#hum").text(data.hum);
+
+
             }
         });
     }
@@ -169,7 +188,7 @@
 
             seconds = time.getSeconds();
 
-        document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+        document.querySelectorAll('.clock')[0].innerHTML = "|  " + harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
 
         function harold(standIn) {
             if (standIn < 10) {
