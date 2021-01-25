@@ -41,23 +41,26 @@ class LineinfoController extends Controller
     }
 
     public function actionGetEmpPos(){
+        $phone = array();
+        $linePos = array();
         $produceDep = Yii::app()->db->CreateCommand()
             ->select()
             ->from("producedep")
             ->where("produceType = 'produce' AND departmentId = 4 AND date(produceDate) = '".date("Y-m-d")."'")
             ->order("producedepId desc")
             ->queryRow();
-        $phone = Yii::app()->db->createCommand()
-            ->select()
-            ->from("phone")
-            ->where("phoneId = ".$produceDep["phoneId"])
-            ->queryRow();
-        $linePos = Yii::app()->db->CreateCommand()
-            ->select()
-            ->from("lineposition")
-            ->where("phoneId = :model ",array(":model"=>$produceDep["phoneId"]))
-            ->queryAll();
-
+        if($produceDep != null) {
+            $phone = Yii::app()->db->createCommand()
+                ->select()
+                ->from("phone")
+                ->where("phoneId = " . $produceDep["phoneId"])
+                ->queryRow();
+            $linePos = Yii::app()->db->CreateCommand()
+                ->select()
+                ->from("lineposition")
+                ->where("phoneId = :model ", array(":model" => $produceDep["phoneId"]))
+                ->queryAll();
+        }
         $model = Yii::app()->db->CreateCommand()
             ->select("e.photo, e.name as eName, e.surname, a.reason as linePosition")
             ->from("action a")
@@ -91,13 +94,15 @@ class LineinfoController extends Controller
             ->where('`type`="remote"')
             ->order('infoDate desc')
             ->queryRow();
-
-        $count = Yii::app()->db->CreateCommand()
-            ->select("count(*) as cnt")
-            ->from('lineinfo')
-            ->where('`type`="distance" and infoDate >= "'.$produceDep["produceDate"].'"')
-            ->order('infoDate desc')
-            ->queryRow();
+        $count = array();
+        if($produceDep != null) {
+            $count = Yii::app()->db->CreateCommand()
+                ->select("count(*) as cnt")
+                ->from('lineinfo')
+                ->where('`type`="distance" and infoDate >= "' . $produceDep["produceDate"] . '"')
+                ->order('infoDate desc')
+                ->queryRow();
+        }
 
         echo json_encode($res = array(
             "model"=>$model,
@@ -106,7 +111,7 @@ class LineinfoController extends Controller
             "hum"=>$hum["value"],
             "temp"=>$temp["value"],
             "remote"=>$remote["value"],
-            "count"=>$count["cnt"]
+            "count"=>$count["cnt"] == null ? 0 : $count["cnt"]
         ));
     }
 }

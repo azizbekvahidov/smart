@@ -79,17 +79,17 @@
     }
     .clock{
         position: absolute;
-        bottom: 1vh;
+        bottom: 6vh;
         right: 1vh;
     }
     .assemblyCnt{
         position: absolute;
-        top: 1vh;
-        right: 1vh;
+        bottom: 1vh;
+        left: 1vh;
     }
     .temperature{
         position: absolute;
-        bottom: 1vh;
+        top: 1vh;
         left: 1vh;
     }
 </style>
@@ -123,8 +123,8 @@
 
     </div>
 </div>
-<div class="font2 assemblyCnt">13</div>
-<div class="font3 temperature">Temperature: <span id="temp">12</span> &#186;C <br> Humidity: <span id="hum">23</span>%</div>
+<div class="font2 assemblyCnt">0</div>
+<div class="font3 temperature">Temperature: <span id="temp">-</span> &#186;C &nbsp; Humidity: <span id="hum">-</span>%</div>
 <div class="font2 clock" style="line-height: 100%"><?=date("H:i:s")?> </div>
 <script>
     var curPhone = 0;
@@ -188,7 +188,7 @@
 
             seconds = time.getSeconds();
 
-        document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+        document.querySelectorAll('.clock')[0].innerHTML = "|  " + harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
 
         function harold(standIn) {
             if (standIn < 10) {

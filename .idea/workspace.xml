@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b27023e5-2703-4afa-b5ab-8c8abcb8d460" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9602cc42-78a8-42ff-ae71-8c7b369000dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9602cc42-78a8-42ff-ae71-8c7b369000dd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/controllers/LineinfoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/LineinfoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/views/lineinfo/assemblyLineInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/lineinfo/assemblyLineInfo.php" afterDir="false" />
@@ -288,6 +285,8 @@
       <workItem from="1597643212508" duration="5118000" />
       <workItem from="1599192129836" duration="614000" />
       <workItem from="1611232682346" duration="7958000" />
+      <workItem from="1611408235935" duration="20000" />
+      <workItem from="1611547711362" duration="1201000" />
     </task>
     <servers />
   </component>
@@ -299,7 +298,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
