@@ -395,4 +395,14 @@ class ApiController extends Controller{
             ->queryAll();
         echo json_encode($linepos);
     }
+
+    public function actionGetNews(){
+        $model = Yii::app()->db->createCommand()
+            ->select("header,content,foto,date(newsDate) as newsDate")
+            ->from("news")
+            ->where('status = 0 and newsType = :type',array(":type"=>"sold"))
+            ->order("newsDate desc")
+            ->queryAll();
+        echo json_encode($model);
+    }
 }
